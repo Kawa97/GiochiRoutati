@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import {DemoRouterModule} from './router/router.Module';
 import { ListService } from './list.service';
 import { DetailComponent } from './detail/detail.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DetailComponent } from './detail/detail.component';
     ListaComponent,
     ModificaComponent,
     HeaderComponent,
-    DetailComponent
+    DetailComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
