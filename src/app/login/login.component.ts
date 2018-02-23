@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChangedisplayService } from '../changedisplay.service';
 
 @Component({
   selector: 'app-login',
@@ -6,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private changediplayService :ChangedisplayService) {
+  }
+  
   ngOnInit() {
   }
-
-  mostraHeader(){
-    
+  
+  ngOnDestroy() {
   }
+
+  login(){
+    this.changediplayService.Login();
+  }
+  
 }

@@ -11,6 +11,7 @@ import { ListService } from './list.service';
 import { DetailComponent } from './detail/detail.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
+import { ChangedisplayService } from './changedisplay.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     DemoRouterModule
   ],
-  providers: [ListService],
+  providers: [ListService,ChangedisplayService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
