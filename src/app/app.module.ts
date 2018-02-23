@@ -12,7 +12,7 @@ import { DetailComponent } from './detail/detail.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
 import { ChangedisplayService } from './changedisplay.service';
-
+import {FormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +26,7 @@ import { ChangedisplayService } from './changedisplay.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     DemoRouterModule
   ],
   providers: [ListService,ChangedisplayService],

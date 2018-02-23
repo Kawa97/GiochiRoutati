@@ -1,8 +1,8 @@
 <div class="login">
 <h1>Benvenuto! Loggati qua!</h1>
 <p>Inserisci il tuo Username: </p>
-<input type="text" name="username" placeholder="Username">
+<input [(ngModel)]="username" type="text" name="username" placeholder="Username" >
 <p>Inserisci la tua Password: </p>
-<input type="password" name="password" placeholder="Password">
-<button routerLink="/home" (click)="login()">Conferma Credenziali</button>
+<input [(ngModel)]="password" type="password" name="password" placeholder="Password" >
+<button (click)="login()">Conferma Credenziali</button>
 </div>
