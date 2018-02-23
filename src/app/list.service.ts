@@ -1,18 +1,18 @@
-import { Character } from "./character";
+import { Game } from "./Game";
 
 export class ListService {
-    private items: Character[] = [
-        new Character(0),
-        new Character(1, "Manga"),
-        new Character(2, "Disney", "Pippo"),
-        new Character(3, "Disney", "Pluto", 45)
+    private items: Game[] = [
+        new Game(0,"Shish","Molto bello","Fps",87,50,"2014"),
+        new Game(1, "Manga"),
+        new Game(2, "Disney", "Pippo"),
+        new Game(3, "Disney", "Pluto")
     ];
 
-    getCharactersList(): Character[] {
+    getGamesList(): Game[] {
         return this.items;
     }
 
-    getCharacterById(id: number): Character {
+    getGameById(id: number): Game {
         for (let character of this.items) {
             if (character.id == id)
                 return character;

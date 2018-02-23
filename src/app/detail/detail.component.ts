@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute} from '@angular/router';
 import { ListService } from '../list.service';
-import { Character } from '../Character';
+import { Game } from '../Game';
 
 @Component({
   selector: 'detail',
@@ -9,12 +9,12 @@ import { Character } from '../Character';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent {
-  currentCharacter: Character;
+  currentGame: Game;
 
   constructor(private route: ActivatedRoute, private listService: ListService) { 
     this.route.params.subscribe(params => {
       if (params['id'] != '' && params['id'] != null) {
-          this.currentCharacter = this.listService.getCharacterById(params['id']);
+          this.currentGame = this.listService.getGameById(params['id']);
       }
   });
   }

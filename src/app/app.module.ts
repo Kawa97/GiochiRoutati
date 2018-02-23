@@ -10,6 +10,7 @@ import {DemoRouterModule} from './router/router.Module';
 import { ListService } from './list.service';
 import { DetailComponent } from './detail/detail.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     ModificaComponent,
     HeaderComponent,
     DetailComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

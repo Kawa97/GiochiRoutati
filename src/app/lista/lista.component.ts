@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ListService } from '../list.service';
-import { Character } from '../Character';
 import { ComunicatorService } from '../comunicator.service';
 import { Router } from '@angular/router';
+import { Game } from '../Game';
 
 @Component({
   selector: 'app-lista',
@@ -10,18 +10,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./lista.component.css']
 })
 export class ListaComponent {
-  items: Character[];
+  items: Game[];
   
   constructor(private listService: ListService,private router: Router){
   }
 
   ngOnInit() {
-      this.items = this.listService.getCharactersList();
+      this.items = this.listService.getGamesList();
   }
 
   ngOnDestroy() {
   }
-  selectItem(item: Character){
+  selectItem(item: Game){
     this.router.navigate(["/detail/"+item.id])
   }
 }

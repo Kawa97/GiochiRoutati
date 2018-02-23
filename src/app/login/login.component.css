@@ -1,0 +1,10 @@
+.login{
+border:solid;
+border-radius: 10px;
+width:250px;
+border-width: 2px;
+}
+
+.login p{
+    text-align: center;
+}
