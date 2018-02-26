@@ -7,7 +7,7 @@ import { ChangedisplayService } from './changedisplay.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  logged:boolean=false;
+  logged:boolean;
   
   constructor(private changediplayService :ChangedisplayService) {
     this.changediplayService.mySubject$.subscribe(logged =>{this.logged=logged;});

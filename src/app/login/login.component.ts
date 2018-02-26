@@ -8,8 +8,8 @@ import { ChangedisplayService } from '../changedisplay.service';
 export class LoginComponent implements OnInit {
 
   @Input()
-  username:String;
-  password:String;
+  username:string;
+  password:string;
 
   constructor(private changediplayService :ChangedisplayService) {
   }

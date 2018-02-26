@@ -7,20 +7,16 @@ import { ModificaComponent } from '../modifica/modifica.component';
 import { DetailComponent } from '../detail/detail.component';
 import { NotfoundComponent } from '../notfound/notfound.component';
 import { LoginComponent } from '../login/login.component';
-import { AuthGuard } from '../AuthGuard';
+import { AuthGuard } from '../authguard.service';
     
     const routes: Routes = [
         { path: '', redirectTo:'login' ,pathMatch:'full'},
-        {   path: 'login' , component:LoginComponent,
-        canActivateChild:[AuthGuard],
-            children:[
-            { path: 'home', component: HomeComponent,canActivate:[AuthGuard]},
-            { path: 'lista', component: ListaComponent },
-            { path: 'detail/:id', component: DetailComponent },
-            { path: '**', component: NotfoundComponent}
-                    ]
-        },
-                            ];
+        {   path: 'login' , component:LoginComponent},
+        { path: 'home', component: HomeComponent,canActivate:[AuthGuard]},
+        { path: 'lista', component: ListaComponent ,canActivate:[AuthGuard]},
+        { path: 'detail/:id', component: DetailComponent,canActivate:[AuthGuard] },
+        { path: '**', component: NotfoundComponent,canActivate:[AuthGuard]}
+        ];
 
 
 

@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
 import { ChangedisplayService } from './changedisplay.service';
 import {FormsModule} from '@angular/forms'
+import { AuthGuard } from './authguard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import {FormsModule} from '@angular/forms'
     FormsModule,
     DemoRouterModule
   ],
-  providers: [ListService,ChangedisplayService],
+  providers: [ListService,ChangedisplayService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

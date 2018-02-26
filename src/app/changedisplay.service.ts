@@ -1,6 +1,6 @@
 import { Injectable} from '@angular/core';
 import { Subject }    from 'rxjs/Subject';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'
 @Injectable()
 export class ChangedisplayService {
 
@@ -10,11 +10,20 @@ export class ChangedisplayService {
 
   public mySubject$ = this.mySubject.asObservable();
 
-  Login(username:String,password:String){
-    if(username=="ciao"){
+  controllaLogin():boolean{
+    if(sessionStorage.getItem('username')!=null){
+return true;
+    }
+    else  {return false}
+  }
+
+  Login(username:string,password:string){
+    if(username=="ciao"&&password=="ciao"){
+    sessionStorage.setItem('username',username);
     this.mySubject.next(true);
     this.router.navigate(["/home"]);
     }
     else {console.log("bhoo")}
   }
+
 }
