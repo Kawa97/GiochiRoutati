@@ -17,15 +17,4 @@ canActivate() {
         return false;
     }
     }
-
-    canActivatelogin() {
-        if(this.changedisplayService.controllaLogin()){
-            this.router.navigate(["/home"]);
-            return false;
-        }
-        else{
-            
-            return true;
-        }
-        }
 }

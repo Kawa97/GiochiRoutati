@@ -18,12 +18,6 @@ import { AuthGuard } from '../authguard.service';
         { path: '**', component: NotfoundComponent,canActivate:[AuthGuard]}
         ];
 
-
-
-
-
-        
-
     @NgModule({
     imports: [
     RouterModule.forRoot(
