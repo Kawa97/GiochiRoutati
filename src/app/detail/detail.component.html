@@ -3,7 +3,7 @@
 <div>Descrizione: {{currentGame?.descrizione}}</div>
 <div>Genere: {{currentGame?.genere}}</div>
 <div>Rating: {{currentGame?.rating}}</div>
-<div>Prezzo: {{currentGame?.prezzo}}</div>
+<div>Prezzo: {{currentGame?.prezzo | sconto:20}}</div>
 <div>Anno di uscita: {{currentGame?.annouscita}}</div>
 <br>
 <a routerLink="/lista">Torna in lista</a>

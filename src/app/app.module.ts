@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { ChangedisplayService } from './changedisplay.service';
 import {FormsModule} from '@angular/forms'
 import { AuthGuard } from './authguard.service';
+import { MoltiplicaPipe } from './moltiplica.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { AuthGuard } from './authguard.service';
     HeaderComponent,
     DetailComponent,
     NotfoundComponent,
-    LoginComponent
+    LoginComponent,
+    MoltiplicaPipe
   ],
   imports: [
     BrowserModule,
