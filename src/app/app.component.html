@@ -6,7 +6,7 @@
   
   <h1 appHighLight [defaultcolor]="'cyan'">
     Welcome to {{ title }}!
-    OFFORSE NOOOO
+    <ng-container *ngIf="!forse">OFFORSE NOOOO</ng-container>
   </h1>
 
   <h1 appHighLight>
