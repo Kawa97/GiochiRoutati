@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class Ato4Pipe implements PipeTransform {
 
-  transform(value: string): string {
-    return value.replace("a","4").replace("a","4");
+  transform(value: string,arg:string): string {
+    return value.replace("a",arg).replace("a",arg);
   }
 
 }
