@@ -3,23 +3,20 @@ import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/cor
 @Directive({
   selector: '[appHighLight]'
 })
-export class HighLightDirective implements OnInit{
-
-  ngOnInit(): void {
-    this.elem.nativeElement.style.background=this.highlightColor;
-  }
+export class HighLightDirective{
+  ultimatedefaultcolor="red";
    constructor(private elem: ElementRef) {
   }
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.setBackground(this.highlightColor);
+    this.setBackground(this.highlightColor || this.defaultcolor || this.ultimatedefaultcolor);
     }
 
   @HostListener('mouseleave') onMouseLeave() {
     this.setBackground();
     }
 
-  setBackground(value: string= this.defaultcolor){
+  setBackground(value: string= null){
     this.elem.nativeElement.style.background=value;
   }
 
