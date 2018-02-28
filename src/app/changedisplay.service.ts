@@ -1,9 +1,20 @@
 import { Injectable} from '@angular/core';
 import { Subject }    from 'rxjs/Subject';
-import { Router } from '@angular/router'
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router'
+import { Observable } from 'rxjs/Observable';
 @Injectable()
-export class ChangedisplayService {
+export class ChangedisplayService implements CanActivate{
 
+  canActivate() {
+    if(!this.controllaLogin()){
+        console.log("Sloggato");
+        return true;
+    }
+    else{
+        this.router.navigate(["/home"]);
+        return false;
+    }
+    }
   constructor(private router: Router) { }
 
   private mySubject = new Subject<boolean>();
