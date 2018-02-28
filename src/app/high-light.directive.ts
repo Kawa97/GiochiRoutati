@@ -1,10 +1,13 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appHighLight]'
 })
-export class HighLightDirective {
+export class HighLightDirective implements OnInit{
 
+  ngOnInit(): void {
+    this.elem.nativeElement.style.background=this.highlightColor;
+  }
    constructor(private elem: ElementRef) {
   }
 
@@ -16,12 +19,12 @@ export class HighLightDirective {
     this.setBackground();
     }
 
-  setBackground(value: string= null){
+  setBackground(value: string= this.defaultcolor){
     this.elem.nativeElement.style.background=value;
   }
 
-  @Input('appHighLight') highlightColor: string;
-
+  @Input('appHighLight') highlightColor: string; 
+  @Input() defaultcolor : string;
 }
 
 
