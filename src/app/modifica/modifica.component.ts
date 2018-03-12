@@ -28,11 +28,11 @@ export class ModificaComponent {
   }
 
   onSubmit(){
-    this.gioco.name=this.form.get('name').value;
-    this.gioco.description=this.form.get('description').value;
-    this.gioco.genre=this.form.get('genre').value;
-    this.gioco.rating=this.form.get('rating').value;
-    this.gioco.price=this.form.get('price').value;
-    this.gioco.releaseDate=this.form.get('releaseDate').value;
+    this.gioco.name=this.form.get('name').value ||this.gioco.name;
+    this.gioco.description=this.form.get('description').value || this.gioco.description;
+    this.gioco.genre=this.form.get('genre').value || this.gioco.genre;
+    this.gioco.rating=this.form.get('rating').value || this.gioco.rating;
+    this.gioco.price=this.form.get('price').value || this.gioco.price;
+    this.gioco.releaseDate=this.form.get('releaseDate').value ||  this.gioco.releaseDate;
   }
 }
