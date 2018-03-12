@@ -1,6 +1,6 @@
 import {Component} from '@angular/core'
 import { Game } from '../Game';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-modifica',
@@ -18,9 +18,9 @@ export class ModificaComponent {
 
   createForm(){
     this.form=this.fb.group(
-      {name:'',
+      {name:['',Validators.required],
       description:'',
-      genre:'',
+      genre:['',Validators.required],
       rating:'',
       price:'',
       releaseDate:''
