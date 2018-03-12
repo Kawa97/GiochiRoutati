@@ -12,7 +12,7 @@ import { ChangedisplayService } from '../changedisplay.service';
     
     const routes: Routes = [
         { path: '', redirectTo:'login' ,pathMatch:'full'},
-        { path: 'login' , component:LoginComponent,canActivate:[ChangedisplayService]},
+        { path: 'login' , component:LoginComponent},
         { path: 'home', component: HomeComponent,canActivate:[AuthGuard]},
         { path: 'lista', component: ListaComponent ,canActivate:[AuthGuard]},
         { path: 'detail/:id', component: DetailComponent,canActivate:[AuthGuard] },

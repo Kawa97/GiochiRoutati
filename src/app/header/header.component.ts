@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { ChangedisplayService } from '../changedisplay.service';
 
 @Component({
   selector: 'header',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core'
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  name:string="carlo";
+  constructor(private changediplayService :ChangedisplayService) { }
 
   ngOnInit() {
+    this.name=sessionStorage.getItem('username');
+  }
+
+  logout(){
+    this.changediplayService.Logout();
   }
 }

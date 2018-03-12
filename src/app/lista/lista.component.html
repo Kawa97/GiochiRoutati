@@ -1,6 +1,6 @@
 <div *ngFor="let item of items; let i=index" (click)="selectItem(item)">
     <div>name: {{item.name}}</div>
-    <div>genere: {{item.genere}}</div>
-    <div>Anno di uscita: {{item.annouscita}}</div>
+    <div>genere: {{item.genre}}</div>
+    <div>Anno di uscita: {{item.releaseDate}}</div>
     <div *ngIf="i!=items.length-1">-------------</div>
 </div>

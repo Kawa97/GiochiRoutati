@@ -1,9 +1,9 @@
 
 <div>Nome: {{currentGame?.name}}</div>
-<div>Descrizione: {{currentGame?.descrizione}}</div>
-<div>Genere: {{currentGame?.genere}}</div>
+<div>Descrizione: {{currentGame?.description}}</div>
+<div>Genere: {{currentGame?.genre}}</div>
 <div>Rating: {{currentGame?.rating}}</div>
-<div>Prezzo: {{currentGame?.prezzo | sconto:20}}</div>
-<div>Anno di uscita: {{currentGame?.annouscita}}</div>
+<div>Prezzo: {{currentGame?.price | sconto:20}}</div>
+<div>Anno di uscita: {{currentGame?.releaseDate}}</div>
 <br>
 <a routerLink="/lista">Torna in lista</a>

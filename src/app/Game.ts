@@ -1,20 +1,20 @@
 export class Game{
     id: number;
     name: string;
-    descrizione:string;
-    genere:string;
+    description:string;
+    genre:string;
     rating:number;
-    prezzo:number;
-    annouscita:string;
+    price:number;
+    releaseDate:string;
     
-    constructor(id: number,name: string = "bho",descrizione: string = "bho",genere:string ="bho",
-    rating:number =null,prezzo:number=null,annouscita:string="bho"){
+    constructor(id: number,name: string = "bho",description: string = "bho",genre:string ="bho",
+    rating:number =0,price:number=0,releaseDate:string="bho"){
         this.id=id;
         this.name = name;
-        this.descrizione = descrizione;
-        this.genere = genere;
+        this.description = description;
+        this.genre = genre;
         this.rating = rating;
-        this.prezzo = prezzo;
-        this.annouscita = annouscita;
+        this.price = price;
+        this.releaseDate = releaseDate;
     }
 }
