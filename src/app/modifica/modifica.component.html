@@ -25,10 +25,13 @@
     <label for="releaseDate">Release Date: </label>
     <input formControlName="releaseDate"  placeholder="{{gioco.releaseDate}}">
     </div>
+    <button type="submit">Submittamelo</button>
+    <button type="reset">Resettamelo   </button>
+    </form>
   <br><br><br><br><br><br>
-<div>Nome: {{form.get('name').value || gioco.name}}</div>
-<div>Descrizione: {{form.get('description').value || gioco.description}}</div>
-<div>Genere: {{form.get('genre').value || gioco.genre}}</div>
-<div>Rating: {{form.get('rating').value || gioco.rating}}</div>
-<div>Prezzo: {{form.get('price').value || gioco.price}}</div>
-<div>Anno di uscita: {{form.get('releaseDate').value || gioco.releaseDate}}</div>
+<div>Nome: {{gioco.name}}</div>
+<div>Descrizione: {{gioco.description}}</div>
+<div>Genere: {{gioco.genre}}</div>
+<div>Rating: {{gioco.rating}}</div>
+<div>Prezzo: {{gioco.price}}</div>
+<div>Anno di uscita: {{gioco.releaseDate}}</div>

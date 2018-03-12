@@ -26,4 +26,13 @@ export class ModificaComponent {
       releaseDate:''
     });
   }
+
+  onSubmit(){
+    this.gioco.name=this.form.get('name').value;
+    this.gioco.description=this.form.get('description').value;
+    this.gioco.genre=this.form.get('genre').value;
+    this.gioco.rating=this.form.get('rating').value;
+    this.gioco.price=this.form.get('price').value;
+    this.gioco.releaseDate=this.form.get('releaseDate').value;
+  }
 }
