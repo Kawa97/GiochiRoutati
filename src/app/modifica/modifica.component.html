@@ -1,15 +1,34 @@
-<form [formGroup]="form">
-<div>
-<label>Name: </label>
-<input formContolName="name">
-</div>
-
-</form>
-
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div>
+    <label for="name">Name: </label>
+    <input formControlName="name" placeholder="{{gioco.name}}">
+    </div>
+    <div>
+    <label for="description">Description: </label>
+    <input formControlName="description"  placeholder="{{gioco.description}}">
+    </div>
+    <div>
+    <label for="genre">Genre: </label>
+    <select formControlName="genre" value="{{gioco.genre}}">
+      <option *ngFor="let genre of genres" [value]="genre">{{genre}}</option>
+    </select>
+    </div>
+    <div>
+    <label for="rating">Rating: </label>
+    <input formControlName="rating"  placeholder="{{gioco.rating}}">
+    </div>
+    <div>
+    <label for="price">Price: </label>
+    <input formControlName="price"  placeholder="{{gioco.price}}">
+    </div>
+    <div>
+    <label for="releaseDate">Release Date: </label>
+    <input formControlName="releaseDate"  placeholder="{{gioco.releaseDate}}">
+    </div>
   <br><br><br><br><br><br>
-<div>Nome: {{gioco.name}}</div>
-<div>Descrizione: {{gioco.description}}</div>
-<div>Genere: {{gioco.genre}}</div>
-<div>Rating: {{gioco.rating}}</div>
-<div>Prezzo: {{gioco.price | sconto:20}}</div>
-<div>Anno di uscita: {{gioco.releaseDate}}</div>
+<div>Nome: {{form.get('name').value || gioco.name}}</div>
+<div>Descrizione: {{form.get('description').value || gioco.description}}</div>
+<div>Genere: {{form.get('genre').value || gioco.genre}}</div>
+<div>Rating: {{form.get('rating').value || gioco.rating}}</div>
+<div>Prezzo: {{form.get('price').value || gioco.price}}</div>
+<div>Anno di uscita: {{form.get('releaseDate').value || gioco.releaseDate}}</div>
