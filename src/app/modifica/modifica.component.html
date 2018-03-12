@@ -1,34 +1,4 @@
-<form (ngSubmit)="onSubmit()" #modifyForm="ngForm">
-  <div class="form-group">
-  <label for="name">Name: </label>
-  <input type="text" class="form-control" id="name" required [(ngModel)]="gioco.name" name="name" #nameVar="ngModel">
-  <div [hidden]="nameVar.pristine">Prova</div>
-  </div>
-  <div class="form-group">
-  <label for="description">Description: </label>
-  <input type="text" class="form-control" id="description" [(ngModel)]="gioco.description" name="description" #descriptionVar="ngModel">
-  <div [hidden]="descriptionVar.pristine">Prova</div>
-  </div>
-  <div class="form-group">
-  <label for="genre">Genre: </label>
-  <select class="form-control" id="genre" required [(ngModel)]="gioco.genre" name="genre" #genreVar="ngModel">
-  <option *ngFor="let genre of genres" [value]="genre">{{genre}}</option>
-  </select>
-  </div>
-  <div class="form-group">
-    <label for="rating">Rating: </label>
-    <input type="text" class="form-control" id="rating" [(ngModel)]="gioco.rating" name="rating" #ratingVar="ngModel">
-  </div>
-  <div class="form-group">
-    <label for="price">Price: </label>
-    <input type="text" class="form-control" id="price" [(ngModel)]="gioco.price" name="price" #priceVar="ngModel">
-  </div>
-  <div class="form-group">
-    <label for="releaseDate">Release Date: </label>
-    <input type="text" class="form-control" id="releaseDate" [(ngModel)]="gioco.releaseDate" name="releaseDate" #releaseDateVar="ngModel">
-  </div>
-  <button type="submit" class="btn btn-success">Submit</button>
-  </form>
+
 
   <br><br><br><br><br><br>
 <div>Nome: {{gioco.name}}</div>
