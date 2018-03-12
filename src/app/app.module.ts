@@ -6,13 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { ListaComponent } from './lista/lista.component';
 import { ModificaComponent } from './modifica/modifica.component';
 import { HeaderComponent } from './header/header.component';
-import {DemoRouterModule} from './router/router.Module';
+import { DemoRouterModule } from './router/router.Module';
 import { ListService } from './list.service';
 import { DetailComponent } from './detail/detail.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
 import { ChangedisplayService } from './changedisplay.service';
-import {FormsModule} from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AuthGuard } from './authguard.service';
 import { MoltiplicaPipe } from './moltiplica.pipe';
 @NgModule({
@@ -30,7 +30,8 @@ import { MoltiplicaPipe } from './moltiplica.pipe';
   imports: [
     BrowserModule,
     FormsModule,
-    DemoRouterModule
+    DemoRouterModule,
+    ReactiveFormsModule
   ],
   providers: [ListService,ChangedisplayService,AuthGuard],
   bootstrap: [AppComponent]

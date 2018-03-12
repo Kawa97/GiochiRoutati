@@ -1,5 +1,6 @@
 import {Component} from '@angular/core'
 import { Game } from '../Game';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-modifica',
@@ -9,8 +10,20 @@ import { Game } from '../Game';
 export class ModificaComponent {
 
   genres:string[]= ["Fps","Rpg","Moba","Puzzle","Schifo"];
-  constructor() { }
+  constructor(private fb: FormBuilder) { this.createForm();}
   values ="";
+  form: FormGroup;
   gioco:Game= new Game(0,"Shish","Molto bello","Fps",87,50,"2014");
 
+
+  createForm(){
+    this.form=this.fb.group(
+      {name:'',
+      description:'',
+      genre:'',
+      rating:'',
+      price:'',
+      releaseDate:''
+    });
+  }
 }
